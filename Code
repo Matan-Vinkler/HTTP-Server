@@ -46,7 +46,7 @@ while True:
         if url == '':
             path = 'C:\\weboot\\index.html'
         else:
-            path = 'C:\\webroot' + path.join(url.split('/'))
+            path = 'C:\\webroot\\' + '\\'.join(url.split('/'))
 
         data = open(path).read()
         respone_packet += 'Content-Length: ' + str(len(data)) + '\r\n'
